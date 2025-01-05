@@ -49,7 +49,6 @@ function sendRegistrationEmail(
   replacements,
   callback
 ) {
-  console.log("eventName", replacements.eventName);
   const pdfName = replacements.eventName;
   // Read the HTML template
   const templatePath = path.join(

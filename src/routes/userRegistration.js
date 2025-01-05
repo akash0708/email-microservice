@@ -7,7 +7,7 @@ router.post("/", function (req, res) {
   const subject = req.body.subject;
   const name = req.body.name;
 
-  if (!to || !subject || !name || !eventName) {
+  if (!to || !subject || !name) {
     return res.status(400).json({ message: "Missing required fields" });
   }
 
