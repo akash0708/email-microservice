@@ -1,5 +1,5 @@
 const express = require("express");
-const bodyParser = require("body-parser");
+// const bodyParser = require("body-parser");
 const userRegistration = require("./routes/userRegistration");
 const eventRegistration = require("./routes/eventRegistration");
 const cors = require("cors");
@@ -16,7 +16,8 @@ app.use(
   })
 );
 
-app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/register", userRegistration);
 app.use("/api/event", eventRegistration);
