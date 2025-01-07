@@ -68,7 +68,7 @@ function sendRegistrationEmail(
 
   let pdfPath = path.join(__dirname, "pdfs", pdfName + ".pdf");
 
-  let pdfAttachment = fs.readFileSync(pdfPath);
+  // let pdfAttachment = fs.readFileSync(pdfPath);
 
   // Create the transporter
   const transporter = nodemailer.createTransport({
@@ -91,7 +91,7 @@ function sendRegistrationEmail(
       attachments: [
         {
           filename: `${pdfName}.pdf`,
-          content: pdfPath,
+          path: pdfPath,
         },
       ],
     },

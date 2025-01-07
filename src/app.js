@@ -19,6 +19,11 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// test route
+app.get("/", (req, res) => {
+  res.send("alive");
+});
+
 app.use("/api/register", userRegistration);
 app.use("/api/event", eventRegistration);
 
