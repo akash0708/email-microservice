@@ -21,7 +21,9 @@ app.use(express.urlencoded({ extended: true }));
 
 // test route
 app.get("/", (req, res) => {
-  res.send("alive");
+  res.status(200).json({
+    message: "alive",
+  });
 });
 
 app.use("/api/register", userRegistration);
