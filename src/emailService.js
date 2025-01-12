@@ -49,7 +49,7 @@ function sendRegistrationEmail(
   replacements,
   callback
 ) {
-  const pdfName = replacements.eventName;
+  const pdfName = replacements.eventName.toLowerCase();
   // Read the HTML template
   const templatePath = path.join(
     __dirname,
