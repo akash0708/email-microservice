@@ -37,6 +37,13 @@ function sendEmail(to, subject, templateName, replacements, callback) {
       to: to,
       subject: subject,
       html: htmlContent,
+      attachments: [
+        {
+          filename: "convoLogo.webp",
+          path: __dirname + "/assets/convoLogo.png",
+          cid: "unique@convoLogo.com", //same cid value as in the html img src
+        },
+      ],
     },
     callback
   );
