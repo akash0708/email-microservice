@@ -56,7 +56,7 @@ function sendRegistrationEmail(
   replacements,
   callback
 ) {
-  const pdfName = replacements.eventName.toLowerCase();
+  const pdfName = templateName.toLowerCase();
   // Read the HTML template
   const templatePath = path.join(
     __dirname,
@@ -74,8 +74,23 @@ function sendRegistrationEmail(
   });
 
   let pdfPath = path.join(__dirname, "pdfs", pdfName + ".pdf");
+  const pdfExists = fs.existsSync(pdfPath); // Check if the PDF file exists
 
-  // let pdfAttachment = fs.readFileSync(pdfPath);
+  const attachments = [
+    {
+      filename: "convoLogo.webp",
+      path: __dirname + "/assets/convoLogo.png",
+      cid: "unique@convoLogo.com", // Content ID for embedding in HTML
+    },
+  ];
+
+  // Add the PDF attachment if it exists
+  if (pdfExists) {
+    attachments.push({
+      filename: `${pdfName}.pdf`,
+      path: pdfPath,
+    });
+  }
 
   // Create the transporter
   const transporter = nodemailer.createTransport({
@@ -95,12 +110,7 @@ function sendRegistrationEmail(
       to: to,
       subject: subject,
       html: htmlContent,
-      attachments: [
-        {
-          filename: `${pdfName}.pdf`,
-          path: pdfPath,
-        },
-      ],
+      attachments: attachments,
     },
     callback
   );

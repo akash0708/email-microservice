@@ -10,15 +10,26 @@ router.post("/", function (req, res) {
   const name = req.body.name;
   const eventName = req.body.eventName;
 
+  console.log(
+    "to:",
+    to,
+    "subject:",
+    subject,
+    "name:",
+    name,
+    "eventName:",
+    eventName
+  );
+
   if (!to || !subject || !name || !eventName) {
     return res.status(400).json({ message: "Missing required fields" });
   }
 
   sendRegistrationEmail(
     to,
-    subject,
-    "teamRegistration",
-    { name: name, eventName: eventName },
+    `Registration Successful for ${subject}`,
+    eventName,
+    { name: name, eventName: subject },
     function (error, info) {
       if (error) {
         console.error("Error sending email:", error);
