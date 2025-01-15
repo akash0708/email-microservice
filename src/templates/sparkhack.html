@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to SparkHack</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #0f172a;
+        color: white;
+        line-height: 1.6;
+        padding: 1rem;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 2rem auto;
+        background: linear-gradient(to bottom, #1e293b, #0f172a);
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 2rem;
+        position: relative;
+      }
+
+      .logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .logo-container img {
+        width: 100%;
+        height: auto;
+        max-height: 80px;
+        object-fit: contain;
+      }
+
+      .welcome-title {
+        font-size: 2rem;
+        font-weight: bold;
+        background: linear-gradient(to right, #3b82f6, #60a5fa);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1.5rem;
+      }
+
+      .content {
+        background: rgba(30, 41, 59, 0.5);
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border: 1px solid rgba(59, 130, 246, 0.2);
+      }
+
+      .steps {
+        list-style: none;
+        margin: 1.5rem 0;
+      }
+
+      .steps li {
+        margin-bottom: 1rem;
+        padding-left: 2rem;
+        position: relative;
+      }
+
+      .steps li::before {
+        content: "🚀";
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      .highlight {
+        color: #60a5fa;
+        font-weight: bold;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: linear-gradient(to right, #3b82f6, #2563eb);
+        color: white;
+        text-decoration: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 9999px;
+        font-weight: bold;
+        margin: 1rem 0;
+        transition: opacity 0.2s;
+      }
+
+      .cta-button:hover {
+        opacity: 0.9;
+      }
+
+      .footer {
+        text-align: center;
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(59, 130, 246, 0.2);
+        font-size: 0.875rem;
+        color: #94a3b8;
+      }
+
+      @media (max-width: 480px) {
+        .welcome-title {
+          font-size: 1.5rem;
+        }
+        .logo-container {
+          max-width: 150px;
+        }
+        .logo-container img {
+          max-height: 60px;
+        }
+        .container {
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo-container">
+          <img src="cid:unique@convoLogo.com" alt="Convolution X Logo" />
+        </div>
+        <h1 class="welcome-title">Welcome to SparkHack! 🎉</h1>
+      </div>
+
+      <div class="content">
+        <p>Dear {{name}},</p>
+        <br />
+        <p>
+          We are thrilled to welcome you and your team to
+          <span class="highlight">SparkHack</span>, part of Convolution X. Get
+          ready to receive real-time feedback, foster your creativity, and
+          tackle real-world problems that make a difference.
+        </p>
+        <br />
+        <p>
+          To add to the perks, there are
+          <span class="highlight">amazing cash prizes</span> for the
+          top-performing teams!
+        </p>
+        <br />
+        <p>
+          Don't worry, the problem statements will be mailed to you soon. Till
+          then...
+        </p>
+
+        <ul class="steps">
+          <li>
+            Join our
+            <a
+              href="https://chat.whatsapp.com/I7opg0mTu68JztojniCH8o"
+              class="highlight"
+              >communication channel</a
+            >
+            to stay updated, and make sure to invite your team members as well!
+          </li>
+          <li>
+            Review the rules and guidelines
+            <a
+              href="https://www.convolutionjuee.in/event/sparkhack#rules"
+              class="highlight"
+              >here</a
+            >.
+          </li>
+          <li>
+            Rally your team, pitch your ideas, and get ready to build something
+            extraordinary!
+          </li>
+        </ul>
+
+        <p>
+          Feel free to reach out to any of the
+          <a
+            href="https://www.convolutionjuee.in/event/sparkhack#team"
+            class="highlight"
+            >team leads</a
+          >
+          if you have any questions.
+        </p>
+
+        <a href="#" class="cta-button">Join Communication Channel</a>
+      </div>
+
+      <div class="footer">
+        <p>Best regards,</p>
+        <p class="highlight">SparkHack Team</p>
+        <p>Convolution-X</p>
+      </div>
+    </div>
+  </body>
+</html>
