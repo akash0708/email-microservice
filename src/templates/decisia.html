@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="only light" />
     <title>Welcome to Convolution X Shark Tank</title>
     <style>
+      :root {
+        color-scheme: only light;
+      }
+
       * {
         margin: 0;
         padding: 0;
@@ -13,14 +18,19 @@
 
       body {
         font-family: Arial, sans-serif;
-        background-color: #0f172a;
-        color: white;
+        background-color: #0f172a !important;
+        color: white !important;
         line-height: 1.6;
         padding: 1rem;
+        forced-color-adjust: none;
+      }
+
+      a {
+        color: inherit;
       }
 
       .container {
-        max-width: 600px;
+        max-width: 800px;
         margin: 2rem auto;
         background: linear-gradient(to bottom, #1e293b, #0f172a);
         border-radius: 12px;
@@ -54,7 +64,7 @@
       .welcome-title {
         font-size: 2rem;
         font-weight: bold;
-        background: linear-gradient(to right, #f59e0b, #f97316);
+        background: linear-gradient(to right, #3b82f6, #60a5fa);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -66,17 +76,17 @@
         border-radius: 8px;
         padding: 1.5rem;
         margin-bottom: 1.5rem;
-        border: 1px solid rgba(245, 158, 11, 0.2);
+        border: 1px solid rgba(59, 130, 246, 0.2);
       }
 
       .highlight {
-        color: #f59e0b;
+        color: #60a5fa !important;
         font-weight: bold;
       }
 
       .deadline {
-        background: rgba(245, 158, 11, 0.1);
-        border-left: 4px solid #f59e0b;
+        background: rgba(59, 130, 246, 0.1);
+        border-left: 4px solid #60a5fa;
         padding: 1rem;
         margin: 1.5rem 0;
         border-radius: 0 8px 8px 0;
@@ -87,51 +97,42 @@
         border-radius: 8px;
         padding: 1.5rem;
         margin: 1.5rem 0;
-        border: 1px solid rgba(245, 158, 11, 0.2);
+        border: 1px solid rgba(59, 130, 246, 0.2);
       }
 
       .contact-info h3 {
-        color: #f59e0b;
+        color: #60a5fa !important;
         margin-bottom: 0.5rem;
       }
 
-      .footer {
+      .section-title {
+        font-size: 1.75rem;
+        font-weight: bold;
         text-align: center;
-        margin-top: 2rem;
-        padding-top: 1.5rem;
-        border-top: 1px solid rgba(245, 158, 11, 0.2);
-        font-size: 0.875rem;
-        color: #94a3b8;
-      }
-
-      /* New styles for event cards */
-      .events-section {
-        margin-top: 2rem;
-      }
-
-      .events-title {
-        text-align: center;
-        font-size: 1.5rem;
-        color: #f59e0b;
-        margin-bottom: 1.5rem;
+        margin: 2rem 0;
+        background: linear-gradient(to right, #3b82f6, #60a5fa);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
 
       .events-grid {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 1.5rem;
+        padding: 1rem;
       }
 
       .event-card {
-        background: rgba(30, 41, 59, 0.7);
-        border-radius: 8px;
+        background: rgba(30, 41, 59, 0.5) !important;
+        border-radius: 12px;
         overflow: hidden;
-        border: 1px solid rgba(245, 158, 11, 0.2);
         transition: transform 0.3s ease;
+        border: 1px solid rgba(59, 130, 246, 0.2);
       }
 
       .event-card:hover {
-        transform: translateY(-4px);
+        transform: translateY(-5px);
       }
 
       .event-image {
@@ -141,38 +142,37 @@
       }
 
       .event-content {
-        padding: 1rem;
+        padding: 1.25rem;
       }
 
       .event-title {
-        color: #f59e0b;
         font-size: 1.25rem;
         font-weight: bold;
         margin-bottom: 0.5rem;
-      }
-
-      .event-date {
-        color: #94a3b8;
-        font-size: 0.875rem;
-        margin-bottom: 0.5rem;
+        color: #60a5fa !important;
       }
 
       .event-description {
-        color: #e2e8f0;
         font-size: 0.875rem;
+        color: #e2e8f0 !important;
         margin-bottom: 1rem;
       }
 
-      .event-link {
-        display: inline-block;
-        color: #f59e0b;
-        text-decoration: none;
-        font-size: 0.875rem;
-        font-weight: bold;
+      .event-date {
+        font-size: 0.75rem;
+        color: #94a3b8 !important;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
       }
 
-      .event-link:hover {
-        text-decoration: underline;
+      .footer {
+        text-align: center;
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(59, 130, 246, 0.2);
+        font-size: 0.875rem;
+        color: #94a3b8 !important;
       }
 
       @media (max-width: 480px) {
@@ -188,8 +188,12 @@
         .container {
           padding: 1.5rem;
         }
-        .event-image {
-          height: 140px;
+        .events-grid {
+          grid-template-columns: 1fr;
+          padding: 0.5rem;
+        }
+        .section-title {
+          font-size: 1.5rem;
         }
       }
     </style>
@@ -200,17 +204,16 @@
         <div class="logo-container">
           <img src="cid:unique@convoLogo.com" alt="Convolution X Logo" />
         </div>
-        <h1 class="welcome-title">Welcome to Shark Tank! 🦈</h1>
+        <h1 class="welcome-title">Welcome to Decisia! 🦈</h1>
       </div>
 
       <div class="content">
-        <p>Dear [Team Lead Name],</p>
+        <p>Dear {{name}},</p>
         <p>
           Welcome to Convolution X's very own
-          <span class="highlight">"Shark Tank"</span>! We have received your
-          registration for <span class="highlight">[Team Name]</span> and will
-          be using this email address to send any reminders or selection updates
-          as may be needed.
+          <span class="highlight">"Shark Tank"</span>! Your registration is
+          successful. We will be using this email address to send any reminders
+          or selection updates as may be needed.
         </p>
 
         <div class="deadline">
@@ -221,17 +224,23 @@
           </p>
           <p>
             Submit your abstract through the
-            <a href="#" class="highlight">submission link</a>.
+            <a href="https://forms.gle/X66qFqfUuQsKL9nK6" class="highlight"
+              >submission link</a
+            >.
           </p>
         </div>
 
         <div class="contact-info">
           <h3>Event Leads</h3>
+          <br />
           <p>Sayar Paul</p>
           <p>Jeson Paul Kerketta</p>
+          <br />
           <p>
             For assistance, feel free to contact our event leads through our
-            <a href="#" class="highlight">website</a>.
+            <a href="//www.convolutionjuee.in/event/decisia" class="highlight"
+              >website</a
+            >.
           </p>
         </div>
 
@@ -241,42 +250,57 @@
         </p>
       </div>
 
-      <div class="events-section">
-        <h2 class="events-title">Upcoming Events</h2>
-        <div class="events-grid">
-          <div class="event-card">
-            <img
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
-              alt="Pitch Workshop"
-              class="event-image"
-            />
-            <div class="event-content">
-              <h3 class="event-title">Pitch Workshop</h3>
-              <p class="event-date">February 5th, 2025 • 2:00 PM IST</p>
-              <p class="event-description">
-                Learn the art of crafting the perfect elevator pitch from
-                industry experts. Get valuable insights on presenting your ideas
-                effectively.
-              </p>
-              <a href="#" class="event-link">Register Now →</a>
-            </div>
+      <h2 class="section-title">Upcoming Events</h2>
+      <div class="events-grid">
+        <!-- Event Card 1 -->
+        <div class="event-card">
+          <img
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
+            alt="Pitch Workshop"
+            class="event-image"
+          />
+          <div class="event-content">
+            <h3 class="event-title">Pitch Workshop</h3>
+            <p class="event-description">
+              Learn the art of crafting the perfect elevator pitch from industry
+              experts. Get valuable insights on presenting your ideas
+              effectively.
+            </p>
+            <div class="event-date">🗓️ February 5th, 2025</div>
           </div>
+        </div>
 
-          <div class="event-card">
-            <img
-              src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80"
-              alt="Mentorship Session"
-              class="event-image"
-            />
-            <div class="event-content">
-              <h3 class="event-title">Mentorship Session</h3>
-              <p class="event-date">February 8th, 2025 • 3:30 PM IST</p>
-              <p class="event-description">
-                Connect with successful entrepreneurs and get personalized
-                guidance for your startup idea. Limited slots available!
-              </p>
-              <a href="#" class="event-link">Book Your Slot →</a>
-            </div>
+        <!-- Event Card 2 -->
+        <div class="event-card">
+          <img
+            src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80"
+            alt="Mentorship Session"
+            class="event-image"
+          />
+          <div class="event-content">
+            <h3 class="event-title">Mentorship Session</h3>
+            <p class="event-description">
+              Connect with successful entrepreneurs and get personalized
+              guidance for your startup idea. Limited slots available!
+            </p>
+            <div class="event-date">🗓️ February 8th, 2025</div>
+          </div>
+        </div>
+
+        <!-- Event Card 3 -->
+        <div class="event-card">
+          <img
+            src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?auto=format&fit=crop&w=800&q=80"
+            alt="Networking Event"
+            class="event-image"
+          />
+          <div class="event-content">
+            <h3 class="event-title">Networking Mixer</h3>
+            <p class="event-description">
+              Meet fellow participants, mentors, and potential investors in an
+              informal setting.
+            </p>
+            <div class="event-date">🗓️ February 10th, 2025</div>
           </div>
         </div>
       </div>

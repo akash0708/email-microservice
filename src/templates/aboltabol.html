@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="only light" />
     <title>Registration Successful for Abol Tabol</title>
     <style>
+      :root {
+        color-scheme: only light;
+      }
+
       * {
         margin: 0;
         padding: 0;
@@ -13,14 +18,19 @@
 
       body {
         font-family: Arial, sans-serif;
-        background-color: #0f172a;
-        color: white;
+        background-color: #0f172a !important;
+        color: white !important;
         line-height: 1.6;
         padding: 1rem;
+        forced-color-adjust: none;
+      }
+
+      a {
+        color: inherit;
       }
 
       .container {
-        max-width: 600px;
+        max-width: 800px;
         margin: 2rem auto;
         background: linear-gradient(to bottom, #1e293b, #0f172a);
         border-radius: 12px;
@@ -54,7 +64,7 @@
       .success-title {
         font-size: 2rem;
         font-weight: bold;
-        background: linear-gradient(to right, #22c55e, #4ade80);
+        background: linear-gradient(to right, #3b82f6, #60a5fa);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -62,96 +72,102 @@
       }
 
       .content {
-        color: #94a3b8;
-        margin-bottom: 2rem;
         background: rgba(30, 41, 59, 0.5);
-        padding: 1.5rem;
         border-radius: 8px;
-        border: 1px solid rgba(148, 163, 184, 0.1);
-      }
-
-      .content p {
-        margin-bottom: 1rem;
-      }
-
-      .content a {
-        color: #60a5fa;
-        text-decoration: none;
-      }
-
-      .content a:hover {
-        text-decoration: underline;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border: 1px solid rgba(59, 130, 246, 0.2);
       }
 
       .highlight {
-        color: #60a5fa;
-        font-weight: 600;
+        color: #60a5fa !important;
+        font-weight: bold;
       }
 
-      .grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+      .section-title {
+        font-size: 1.75rem;
+        font-weight: bold;
+        text-align: center;
         margin: 2rem 0;
+        background: linear-gradient(to right, #3b82f6, #60a5fa);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
 
-      @media (min-width: 640px) {
-        .grid {
-          grid-template-columns: 1fr 1fr;
-        }
+      .events-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        padding: 1rem;
+      }
 
+      .event-card {
+        background: rgba(30, 41, 59, 0.5) !important;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        border: 1px solid rgba(59, 130, 246, 0.2);
+        text-decoration: none;
+        display: block;
+      }
+
+      .event-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .event-image {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+      }
+
+      .event-content {
+        padding: 1.25rem;
+      }
+
+      .event-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: #60a5fa !important;
+      }
+
+      .event-description {
+        font-size: 0.875rem;
+        color: #e2e8f0 !important;
+        margin-bottom: 1rem;
+      }
+
+      .footer {
+        text-align: center;
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(59, 130, 246, 0.2);
+        font-size: 0.875rem;
+        color: #94a3b8 !important;
+      }
+
+      @media (max-width: 480px) {
+        .success-title {
+          font-size: 1.5rem;
+        }
         .logo-container {
           max-width: 150px;
         }
         .logo-container img {
           max-height: 60px;
         }
-      }
-
-      .card {
-        background-color: #1e293b;
-        border-radius: 8px;
-        padding: 1.5rem;
-        border: 1px solid rgba(96, 165, 250, 0.2);
-        transition: transform 0.2s;
-      }
-
-      .card:hover {
-        transform: translateY(-2px);
-      }
-
-      .card img {
-        width: 100%;
-        height: 160px;
-        object-fit: cover;
-        border-radius: 6px;
-        margin-bottom: 1rem;
-      }
-
-      .card h3 {
-        color: #60a5fa;
-        margin-bottom: 0.5rem;
-        font-size: 1.25rem;
-      }
-
-      .card p {
-        color: #94a3b8;
-        font-size: 0.875rem;
-      }
-
-      .footer {
-        margin-top: 3rem;
-        padding-top: 1.5rem;
-        border-top: 1px solid rgba(96, 165, 250, 0.2);
-        text-align: center;
-        color: #94a3b8;
-        font-size: 0.875rem;
-      }
-
-      .team-signature {
-        margin-top: 1rem;
-        font-style: italic;
-        color: #60a5fa;
+        .container {
+          padding: 1.5rem;
+        }
+        .events-grid {
+          grid-template-columns: 1fr;
+          padding: 0.5rem;
+        }
+        .section-title {
+          font-size: 1.5rem;
+        }
       }
     </style>
   </head>
@@ -168,24 +184,25 @@
 
       <div class="content">
         <p>Dear <span class="highlight">{{name}}</span>,</p>
-
+        <br />
         <p>
           You have successfully registered for
           <span class="highlight">{{eventName}}</span> and will be using this
           email address to send any reminders or selection updates as may be
           needed.
         </p>
-
+        <br />
         <p>
           You can submit your abstract using the
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSchag07qniMDSVI3AUi5QDUmzhMe2MCpAODvFiICYkolKZRfA/viewform"
             target="_blank"
+            class="highlight"
             >Google Form link</a
           >. The last date for abstract submission is on
           <span class="highlight">15th February</span>.
         </p>
-
+        <br />
         <p>
           You can also contact our event leads,
           <a href="tel:801-708-2984" class="highlight">Satrajit Mukherjee</a> or
@@ -194,38 +211,34 @@
         </p>
       </div>
 
-      <h2 style="color: #60a5fa; margin-bottom: 1rem">Upcoming Events</h2>
-      <div class="grid">
-        <a
-          href="https://convolution-x.vercel.app"
-          style="text-decoration: none; outline: none"
-        >
-          <div class="card">
-            <img
-              src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80"
-              alt="Space Mission"
-            />
-            <h3>Decisia</h3>
-            <p>
+      <h2 class="section-title">Upcoming Events</h2>
+      <div class="events-grid">
+        <a href="https://convolution-x.vercel.app" class="event-card">
+          <img
+            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80"
+            alt="Space Mission"
+            class="event-image"
+          />
+          <div class="event-content">
+            <h3 class="event-title">Decisia</h3>
+            <p class="event-description">
               Decisia is like our version of "Shark Tank." It's your platform to
               pitch that dream business idea. You can be the CEO, create the
               product, showcase your profit margins, and pitch it to the
-              "sharks'.
+              "sharks".
             </p>
           </div>
         </a>
 
-        <a
-          href="https://convolution-x.vercel.app"
-          style="text-decoration: none; outline: none"
-        >
-          <div class="card">
-            <img
-              src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=800&q=80"
-              alt="Deep Space"
-            />
-            <h3>SparkHack</h3>
-            <p>
+        <a href="https://convolution-x.vercel.app" class="event-card">
+          <img
+            src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=800&q=80"
+            alt="Deep Space"
+            class="event-image"
+          />
+          <div class="event-content">
+            <h3 class="event-title">SparkHack</h3>
+            <p class="event-description">
               SparkHack is a hackathon where you can build your dream project
               and win exciting prizes. So, what are you waiting for? Register
               now!
@@ -236,7 +249,7 @@
 
       <div class="footer">
         <p>Thank You,</p>
-        <div class="team-signature">Convolution-X Organising Team</div>
+        <p class="highlight">Convolution-X Organising Team</p>
       </div>
     </div>
   </body>

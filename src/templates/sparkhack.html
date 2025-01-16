@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="only light" />
     <title>Welcome to SparkHack</title>
     <style>
+      :root {
+        color-scheme: only light;
+      }
+
       * {
         margin: 0;
         padding: 0;
@@ -13,14 +18,19 @@
 
       body {
         font-family: Arial, sans-serif;
-        background-color: #0f172a;
-        color: white;
+        background-color: #0f172a !important;
+        color: white !important;
         line-height: 1.6;
         padding: 1rem;
+        forced-color-adjust: none;
+      }
+
+      a {
+        color: inherit;
       }
 
       .container {
-        max-width: 600px;
+        max-width: 800px;
         margin: 2rem auto;
         background: linear-gradient(to bottom, #1e293b, #0f172a);
         border-radius: 12px;
@@ -88,14 +98,14 @@
       }
 
       .highlight {
-        color: #60a5fa;
+        color: #60a5fa !important;
         font-weight: bold;
       }
 
       .cta-button {
         display: inline-block;
         background: linear-gradient(to right, #3b82f6, #2563eb);
-        color: white;
+        color: white !important;
         text-decoration: none;
         padding: 0.75rem 1.5rem;
         border-radius: 9999px;
@@ -114,7 +124,69 @@
         padding-top: 1.5rem;
         border-top: 1px solid rgba(59, 130, 246, 0.2);
         font-size: 0.875rem;
-        color: #94a3b8;
+        color: #94a3b8 !important;
+      }
+
+      /* New styles for Explore Events section */
+      .section-title {
+        font-size: 1.75rem;
+        font-weight: bold;
+        text-align: center;
+        margin: 2rem 0;
+        background: linear-gradient(to right, #3b82f6, #60a5fa);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .events-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        padding: 1rem;
+      }
+
+      .event-card {
+        background: rgba(30, 41, 59, 0.5) !important;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        border: 1px solid rgba(59, 130, 246, 0.2);
+      }
+
+      .event-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .event-image {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+      }
+
+      .event-content {
+        padding: 1.25rem;
+      }
+
+      .event-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: #60a5fa !important;
+      }
+
+      .event-description {
+        font-size: 0.875rem;
+        color: #e2e8f0 !important;
+        margin-bottom: 1rem;
+      }
+
+      .event-date {
+        font-size: 0.75rem;
+        color: #94a3b8 !important;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
       }
 
       @media (max-width: 480px) {
@@ -130,6 +202,13 @@
         .container {
           padding: 1.5rem;
         }
+        .events-grid {
+          grid-template-columns: 1fr;
+          padding: 0.5rem;
+        }
+        .section-title {
+          font-size: 1.5rem;
+        }
       }
     </style>
   </head>
@@ -139,7 +218,7 @@
         <div class="logo-container">
           <img src="cid:unique@convoLogo.com" alt="Convolution X Logo" />
         </div>
-        <h1 class="welcome-title">Welcome to SparkHack! 🎉</h1>
+        <h1 class="welcome-title">Welcome to SparkHack!</h1>
       </div>
 
       <div class="content">
@@ -197,7 +276,66 @@
           if you have any questions.
         </p>
 
-        <a href="#" class="cta-button">Join Communication Channel</a>
+        <a
+          href="https://chat.whatsapp.com/I7opg0mTu68JztojniCH8o"
+          class="cta-button"
+          >Join Communication Channel</a
+        >
+      </div>
+
+      <!-- New Explore Events Section -->
+      <h2 class="section-title">Explore Events</h2>
+      <div class="events-grid">
+        <!-- Event Card 1 -->
+        <div class="event-card">
+          <img
+            src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+            alt="Hackathon Event"
+            class="event-image"
+          />
+          <div class="event-content">
+            <h3 class="event-title">SparkHack</h3>
+            <p class="event-description">
+              48-hour hackathon focused on solving real-world problems with
+              innovative solutions.
+            </p>
+            <div class="event-date">🗓️ March 15-17, 2024</div>
+          </div>
+        </div>
+
+        <!-- Event Card 2 -->
+        <div class="event-card">
+          <img
+            src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80"
+            alt="Workshop Event"
+            class="event-image"
+          />
+          <div class="event-content">
+            <h3 class="event-title">Tech Workshops</h3>
+            <p class="event-description">
+              Interactive sessions on cutting-edge technologies and development
+              practices.
+            </p>
+            <div class="event-date">🗓️ March 20, 2024</div>
+          </div>
+        </div>
+
+        <!-- Event Card 3 -->
+        <div class="event-card">
+          <img
+            src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=800&q=80"
+            alt="Networking Event"
+            class="event-image"
+          />
+          <div class="event-content">
+            <h3 class="event-title">Networking Night</h3>
+            <p class="event-description">
+              Connect with industry professionals and fellow participants in a
+              casual setting.
+            </p>
+            <div class="event-date">🗓️ March 25, 2024</div>
+          </div>
+        </div>
       </div>
 
       <div class="footer">
