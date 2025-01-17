@@ -37,13 +37,6 @@ function sendEmail(to, subject, templateName, replacements, callback) {
       to: to,
       subject: subject,
       html: htmlContent,
-      attachments: [
-        {
-          filename: "convoLogo.webp",
-          path: __dirname + "/assets/convoLogo.png",
-          cid: "unique@convoLogo.com", //same cid value as in the html img src
-        },
-      ],
     },
     callback
   );
@@ -76,13 +69,7 @@ function sendRegistrationEmail(
   let pdfPath = path.join(__dirname, "pdfs", pdfName + ".pdf");
   const pdfExists = fs.existsSync(pdfPath); // Check if the PDF file exists
 
-  const attachments = [
-    {
-      filename: "convoLogo.webp",
-      path: __dirname + "/assets/convoLogo.png",
-      cid: "unique@convoLogo.com", // Content ID for embedding in HTML
-    },
-  ];
+  const attachments = [];
 
   // Add the PDF attachment if it exists
   if (pdfExists) {
