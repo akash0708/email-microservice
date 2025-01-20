@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark only" />
+    <title>Team Registration Successful</title>
+    <style>
+      :root {
+        color-scheme: dark only;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #0f172a !important;
+        color: white !important;
+        line-height: 1.6;
+        padding: 1rem;
+        forced-color-adjust: none;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 2rem auto;
+        background: linear-gradient(to bottom, #1e293b, #0f172a);
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 2rem;
+        position: relative;
+      }
+
+      .logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .logo-container img {
+        width: 100%;
+        height: auto;
+        max-height: 80px;
+        object-fit: contain;
+      }
+
+      .success-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #60a5fa !important;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1.5rem;
+      }
+
+      .content {
+        background: rgba(30, 41, 59, 0.5);
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border: 1px solid rgba(59, 130, 246, 0.2);
+        color: #e2e8f0 !important;
+      }
+
+      .highlight {
+        color: #60a5fa !important;
+        font-weight: bold;
+      }
+
+      .date-highlight {
+        display: inline-block;
+        background: rgba(59, 130, 246, 0.1);
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        border: 1px solid rgba(59, 130, 246, 0.2);
+        color: #60a5fa !important;
+        font-weight: bold;
+        margin: 0.5rem 0;
+      }
+
+      .section-title {
+        font-size: 1.75rem;
+        font-weight: bold;
+        text-align: center;
+        margin: 2rem 0;
+        background: linear-gradient(to right, #3b82f6, #60a5fa);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .events-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        padding: 1rem;
+      }
+
+      .event-card {
+        background: rgba(30, 41, 59, 0.5) !important;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        border: 1px solid rgba(59, 130, 246, 0.2);
+        text-decoration: none;
+      }
+
+      .event-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .event-image {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+      }
+
+      .event-content {
+        padding: 1.25rem;
+      }
+
+      .event-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: #60a5fa !important;
+      }
+
+      .event-description {
+        font-size: 0.875rem;
+        color: #e2e8f0 !important;
+        margin-bottom: 1rem;
+      }
+
+      .footer {
+        text-align: center;
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(59, 130, 246, 0.2);
+        font-size: 0.875rem;
+        color: #94a3b8 !important;
+      }
+
+      @media (max-width: 480px) {
+        .success-title {
+          font-size: 1.5rem;
+        }
+        .logo-container {
+          max-width: 150px;
+        }
+        .logo-container img {
+          max-height: 60px;
+        }
+        .container {
+          padding: 1.5rem;
+        }
+        .events-grid {
+          grid-template-columns: 1fr;
+          padding: 0.5rem;
+        }
+        .section-title {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo-container">
+          <img
+            src="https://logoimages6789.s3.ap-south-1.amazonaws.com/convoLogo.png"
+            alt="Convolution X"
+          />
+        </div>
+        <h1 class="success-title">Team Registration Successful!</h1>
+      </div>
+
+      <div class="content">
+        <p>Dear <span class="highlight">{{name}}</span>,</p>
+        <br />
+        <p>
+          We have received your registration for the team
+          <span class="highlight">{{teamName}}</span> and will use this email
+          address to send any reminders or updates regarding selections as
+          needed. Please find attached the
+          <span class="highlight">syllabus</span> and the
+          <span class="highlight">rules and regulations</span> for the event.
+        </p>
+        <br />
+        <p>
+          If you have any questions, feel free to reach out directly to our
+          event leads, <span class="highlight">Sumedha Ghosh Chowdhury</span> or
+          <span class="highlight">Aditya Samanta</span>.
+        </p>
+        <br />
+        <p>
+          Join our
+          <a
+            href="https://chat.whatsapp.com/Dx7XDScy5QX4s1Tt7jv0AQ"
+            class="highlight"
+            >communication channel</a
+          >
+          to stay updated, only one member from each team is requested to join
+          the updates group, preferably the team lead.
+        </p>
+        <br />
+        <p>
+          We are thrilled to have you on board and look forward to your
+          participation.
+        </p>
+        <br />
+        <p>
+          See you on <span class="date-highlight">21st February 2025</span>,
+          straight on D-Day!
+        </p>
+      </div>
+
+      <h2 class="section-title">Other Events</h2>
+      <div class="events-grid">
+        <a
+          href="https://www.convolutionjuee.in/event/decisia"
+          class="event-card"
+        >
+          <img
+            src="https://logoimages6789.s3.ap-south-1.amazonaws.com/desicia.png"
+            alt="Decisia"
+            class="event-image"
+          />
+          <div class="event-content">
+            <h3 class="event-title">Decisia</h3>
+            <p class="event-description">
+              Decisia is like our version of "Shark Tank." It's your platform to
+              pitch that dream business idea. You can be the CEO, create the
+              product, showcase your profit margins, and pitch it to the
+              "sharks".
+            </p>
+          </div>
+        </a>
+
+        <a
+          href="https://www.convolutionjuee.in/event/sparkhack"
+          class="event-card"
+          style="margin-top: 1rem"
+        >
+          <img
+            src="https://logoimages6789.s3.ap-south-1.amazonaws.com/sparkhack.png"
+            alt="SparkHack"
+            class="event-image"
+          />
+          <div class="event-content">
+            <h3 class="event-title">SparkHack</h3>
+            <p class="event-description">
+              SparkHack is a hackathon where you can build your dream project
+              and win exciting prizes. So, what are you waiting for? Register
+              now!
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <div class="footer">
+        <p>Wishing you all the best,</p>
+        <p class="highlight">Convolution X Organising Team</p>
+      </div>
+    </div>
+  </body>
+</html>

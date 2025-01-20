@@ -9,6 +9,7 @@ router.post("/", function (req, res) {
   const subject = req.body.subject;
   const name = req.body.name;
   const eventName = req.body.eventName;
+  const teamName = req.body.teamName;
 
   console.log(
     "to:",
@@ -29,7 +30,7 @@ router.post("/", function (req, res) {
     to,
     `Registration Successful for ${subject}`,
     eventName,
-    { name: name, eventName: subject },
+    { name: name, eventName: subject, teamName: teamName },
     function (error, info) {
       if (error) {
         console.error("Error sending email:", error);
