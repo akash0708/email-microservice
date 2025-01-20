@@ -65,10 +65,7 @@
       .welcome-title {
         font-size: 2rem;
         font-weight: bold;
-        background: linear-gradient(to right, #3b82f6, #60a5fa);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: #e2e8f0 !important;
         margin-bottom: 1.5rem;
       }
 
@@ -135,10 +132,7 @@
         font-weight: bold;
         text-align: center;
         margin: 2rem 0;
-        background: linear-gradient(to right, #3b82f6, #60a5fa);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: #60a5fa !important;
       }
 
       .events-grid {
@@ -212,6 +206,9 @@
         .section-title {
           font-size: 1.5rem;
         }
+        .responsive-margin {
+          margin-top: 1rem;
+        }
       }
     </style>
   </head>
@@ -224,11 +221,13 @@
             alt="Convolution X Logo"
           />
         </div>
-        <h1 class="welcome-title">Welcome to SparkHack!</h1>
+        <h1 class="welcome-title">
+          Welcome to <span class="highlight">SparkHack!</span>
+        </h1>
       </div>
 
       <div class="content">
-        <p>Dear {{name}},</p>
+        <p>Dear <span class="highlight">{{name}},</span></p>
         <br />
         <p>
           We are thrilled to welcome you and your team to
@@ -320,7 +319,8 @@
         <!-- Event Card 2 -->
         <a
           href="https://www.convolutionjuee.in/event/aboltabol"
-          style="text-decoration: none; margin-top: 2rem"
+          style="text-decoration: none"
+          class="responsive-margin"
         >
           <div class="event-card">
             <img

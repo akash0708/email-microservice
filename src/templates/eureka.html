@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="only light" />
-    <title>Registration Successful for Abol Tabol</title>
+    <title>Registration Successful for Eureka!</title>
     <style>
       :root {
         color-scheme: only light;
@@ -23,7 +23,6 @@
         line-height: 1.6;
         padding: 1rem;
         forced-color-adjust: none;
-        color: #e2e8f0;
       }
 
       a {
@@ -37,7 +36,6 @@
         border-radius: 12px;
         padding: 2rem;
         box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        color: #e2e8f0;
       }
 
       .header {
@@ -66,7 +64,8 @@
       .success-title {
         font-size: 2rem;
         font-weight: bold;
-        color: #60a5fa !important;
+        color: #e2e8f0 !important;
+        margin-bottom: 1.5rem;
       }
 
       .content {
@@ -75,7 +74,7 @@
         padding: 1.5rem;
         margin-bottom: 1.5rem;
         border: 1px solid rgba(59, 130, 246, 0.2);
-        color: #e2e8f0;
+        color: #e2e8f0 !important;
       }
 
       .highlight {
@@ -83,12 +82,23 @@
         font-weight: bold;
       }
 
+      .date-highlight {
+        display: inline-block;
+        background: rgba(59, 130, 246, 0.1);
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        border: 1px solid rgba(59, 130, 246, 0.2);
+        color: #60a5fa !important;
+        font-weight: bold;
+        margin: 0.5rem 0;
+      }
+
       .section-title {
         font-size: 1.75rem;
         font-weight: bold;
         text-align: center;
         margin: 2rem 0;
-        color: #60a5fa !important;
+        color: #e2e8f0 !important;
       }
 
       .events-grid {
@@ -105,7 +115,6 @@
         transition: transform 0.3s ease;
         border: 1px solid rgba(59, 130, 246, 0.2);
         text-decoration: none;
-        display: block;
       }
 
       .event-card:hover {
@@ -164,6 +173,9 @@
         .section-title {
           font-size: 1.5rem;
         }
+        .responsive-margin {
+          margin-top: 1rem;
+        }
       }
     </style>
   </head>
@@ -173,11 +185,11 @@
         <div class="logo-container">
           <img
             src="https://logoimages6789.s3.ap-south-1.amazonaws.com/convoLogo.png"
-            alt="Event Logo"
+            alt="Convolution X Logo"
           />
         </div>
         <h1 class="success-title">
-          Registration Successful for {{eventName}}!
+          Welcome to <span class="highlight">Eureka!</span>
         </h1>
       </div>
 
@@ -185,32 +197,31 @@
         <p>Dear <span class="highlight">{{name}}</span>,</p>
         <br />
         <p>
-          You have successfully registered for
-          <span class="highlight">{{eventName}}</span> and will be using this
+          We have received your registration for team
+          <span class="highlight">{{teamName}}</span> and will be using this
           email address to send any reminders or selection updates as may be
-          needed.
-        </p>
-        <br />
-        <p>
-          You can submit your abstract using the
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSchag07qniMDSVI3AUi5QDUmzhMe2MCpAODvFiICYkolKZRfA/viewform"
-            target="_blank"
-            class="highlight"
-            >Google Form link</a
-          >. The last date for abstract submission is on
-          <span class="highlight">15th February</span>.
+          needed. Please find attached the
+          <span class="highlight">particulars of the events</span>.
         </p>
         <br />
         <p>
           You can also contact our event leads,
-          <a href="" class="highlight">Satrajit Mukherjee</a> or
-          <span class="highlight">Subha Bhattacharya</span> directly. We are
+          <span class="highlight">Sayan Laha</span> or
+          <span class="highlight">Abhishek Bhattacharjee</span> directly. We are
           thrilled to have you on board and look forward to your participation.
+        </p>
+        <br />
+        <p>
+          Should you have any questions or need assistance, feel free to reach
+          out to the event leads through our website.
+        </p>
+        <br />
+        <p>
+          See you on <span class="date-highlight">20th February, 2025</span>
         </p>
       </div>
 
-      <h2 class="section-title">Upcoming Events</h2>
+      <h2 class="section-title">Other Events</h2>
       <div class="events-grid">
         <a
           href="https://www.convolutionjuee.in/event/decisia"
@@ -218,7 +229,7 @@
         >
           <img
             src="https://logoimages6789.s3.ap-south-1.amazonaws.com/desicia.png"
-            alt="Space Mission"
+            alt="Decisia"
             class="event-image"
           />
           <div class="event-content">
@@ -234,12 +245,11 @@
 
         <a
           href="https://www.convolutionjuee.in/event/sparkhack"
-          class="event-card"
-          style="margin-top: 2rem"
+          class="event-card responsive-margin"
         >
           <img
             src="https://logoimages6789.s3.ap-south-1.amazonaws.com/sparkhack.png"
-            alt="Deep Space"
+            alt="SparkHack"
             class="event-image"
           />
           <div class="event-content">
@@ -254,7 +264,7 @@
       </div>
 
       <div class="footer">
-        <p>Thank You,</p>
+        <p>Thanking You,</p>
         <p class="highlight">Convolution-X Organising Team</p>
       </div>
     </div>

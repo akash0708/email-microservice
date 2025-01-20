@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="only light" />
-    <title>Registration Successful for Abol Tabol</title>
+    <title>Registration Successful for Algomaniac</title>
     <style>
       :root {
         color-scheme: only light;
@@ -23,7 +23,6 @@
         line-height: 1.6;
         padding: 1rem;
         forced-color-adjust: none;
-        color: #e2e8f0;
       }
 
       a {
@@ -37,7 +36,6 @@
         border-radius: 12px;
         padding: 2rem;
         box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        color: #e2e8f0;
       }
 
       .header {
@@ -66,7 +64,8 @@
       .success-title {
         font-size: 2rem;
         font-weight: bold;
-        color: #60a5fa !important;
+        color: #e2e8f0 !important;
+        margin-bottom: 1.5rem;
       }
 
       .content {
@@ -75,7 +74,7 @@
         padding: 1.5rem;
         margin-bottom: 1.5rem;
         border: 1px solid rgba(59, 130, 246, 0.2);
-        color: #e2e8f0;
+        color: #e2e8f0 !important;
       }
 
       .highlight {
@@ -83,12 +82,23 @@
         font-weight: bold;
       }
 
+      .date-highlight {
+        display: inline-block;
+        background: rgba(59, 130, 246, 0.1);
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        border: 1px solid rgba(59, 130, 246, 0.2);
+        color: #60a5fa !important;
+        font-weight: bold;
+        margin: 0.5rem 0;
+      }
+
       .section-title {
         font-size: 1.75rem;
         font-weight: bold;
         text-align: center;
         margin: 2rem 0;
-        color: #60a5fa !important;
+        color: #e2e8f0 !important;
       }
 
       .events-grid {
@@ -105,7 +115,6 @@
         transition: transform 0.3s ease;
         border: 1px solid rgba(59, 130, 246, 0.2);
         text-decoration: none;
-        display: block;
       }
 
       .event-card:hover {
@@ -126,7 +135,7 @@
         font-size: 1.25rem;
         font-weight: bold;
         margin-bottom: 0.5rem;
-        color: #60a5fa !important;
+        color:;
       }
 
       .event-description {
@@ -164,6 +173,9 @@
         .section-title {
           font-size: 1.5rem;
         }
+        .responsive-margin {
+          margin-top: 1rem;
+        }
       }
     </style>
   </head>
@@ -173,11 +185,11 @@
         <div class="logo-container">
           <img
             src="https://logoimages6789.s3.ap-south-1.amazonaws.com/convoLogo.png"
-            alt="Event Logo"
+            alt="Convolution X"
           />
         </div>
         <h1 class="success-title">
-          Registration Successful for {{eventName}}!
+          Welcome to <span class="highlight">Algomaniac!</span>
         </h1>
       </div>
 
@@ -185,76 +197,105 @@
         <p>Dear <span class="highlight">{{name}}</span>,</p>
         <br />
         <p>
-          You have successfully registered for
-          <span class="highlight">{{eventName}}</span> and will be using this
-          email address to send any reminders or selection updates as may be
-          needed.
+          We have received your registration for
+          <span class="highlight">Algomaniac</span> and will be using this email
+          address to send any reminders or updates as may be needed.
         </p>
         <br />
         <p>
-          You can submit your abstract using the
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSchag07qniMDSVI3AUi5QDUmzhMe2MCpAODvFiICYkolKZRfA/viewform"
-            target="_blank"
-            class="highlight"
-            >Google Form link</a
-          >. The last date for abstract submission is on
-          <span class="highlight">15th February</span>.
+          See you on <span class="date-highlight">21st February, 2025</span>
         </p>
         <br />
         <p>
-          You can also contact our event leads,
-          <a href="" class="highlight">Satrajit Mukherjee</a> or
-          <span class="highlight">Subha Bhattacharya</span> directly. We are
+          You can contact our event leads,
+          <span class="highlight">Shakya Majumdar</span> or
+          <span class="highlight">Srijit Chakraborty</span> directly. We are
           thrilled to have you on board and look forward to your participation.
+        </p>
+        <br />
+        <p>
+          Should you have any questions or need assistance, feel free to reach
+          out to the event leads through our website.
         </p>
       </div>
 
-      <h2 class="section-title">Upcoming Events</h2>
+      <h2 class="section-title">Other Events</h2>
       <div class="events-grid">
         <a
-          href="https://www.convolutionjuee.in/event/decisia"
-          class="event-card"
-        >
-          <img
-            src="https://logoimages6789.s3.ap-south-1.amazonaws.com/desicia.png"
-            alt="Space Mission"
-            class="event-image"
-          />
-          <div class="event-content">
-            <h3 class="event-title">Decisia</h3>
-            <p class="event-description">
-              Decisia is like our version of "Shark Tank." It's your platform to
-              pitch that dream business idea. You can be the CEO, create the
-              product, showcase your profit margins, and pitch it to the
-              "sharks".
-            </p>
-          </div>
-        </a>
-
-        <a
           href="https://www.convolutionjuee.in/event/sparkhack"
-          class="event-card"
-          style="margin-top: 2rem"
+          class="event-card responsive-margin"
         >
           <img
             src="https://logoimages6789.s3.ap-south-1.amazonaws.com/sparkhack.png"
-            alt="Deep Space"
+            alt="Hackathon Event"
             class="event-image"
           />
           <div class="event-content">
             <h3 class="event-title">SparkHack</h3>
             <p class="event-description">
-              SparkHack is a hackathon where you can build your dream project
-              and win exciting prizes. So, what are you waiting for? Register
-              now!
+              48-hour hackathon focused on solving real-world problems with
+              innovative solutions. Join us to build something extraordinary!
+            </p>
+          </div>
+        </a>
+
+        <a
+          href="https://www.convolutionjuee.in/event/inquizzitive"
+          class="event-card responsive-margin"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?auto=format&fit=crop&w=800&q=80"
+            alt="Quiz Competition"
+            class="event-image"
+          />
+          <div class="event-content">
+            <h3 class="event-title">Inquizzitive</h3>
+            <p class="event-description">
+              Test your knowledge and compete with the brightest minds in this
+              exciting quiz competition. Are you ready for the challenge?
+            </p>
+          </div>
+        </a>
+
+        <a
+          href="https://www.convolutionjuee.in/event/eureka"
+          class="event-card responsive-margin"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80"
+            alt="Innovation Challenge"
+            class="event-image"
+          />
+          <div class="event-content">
+            <h3 class="event-title">Eureka</h3>
+            <p class="event-description">
+              Showcase your innovative ideas and solutions in this exciting
+              technical competition. Turn your concepts into reality!
+            </p>
+          </div>
+        </a>
+
+        <a
+          href="https://www.convolutionjuee.in/event/decisia"
+          class="event-card responsive-margin"
+        >
+          <img
+            src="https://logoimages6789.s3.ap-south-1.amazonaws.com/desicia.png"
+            alt="Business Competition"
+            class="event-image"
+          />
+          <div class="event-content">
+            <h3 class="event-title">Decisia</h3>
+            <p class="event-description">
+              Your platform to pitch business ideas, showcase profit margins,
+              and present to our panel of expert judges.
             </p>
           </div>
         </a>
       </div>
 
       <div class="footer">
-        <p>Thank You,</p>
+        <p>Thanking You,</p>
         <p class="highlight">Convolution-X Organising Team</p>
       </div>
     </div>

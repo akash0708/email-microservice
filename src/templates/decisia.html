@@ -64,10 +64,6 @@
       .welcome-title {
         font-size: 2rem;
         font-weight: bold;
-        background: linear-gradient(to right, #3b82f6, #60a5fa);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
         margin-bottom: 1.5rem;
         color: #e2e8f0 !important;
       }
@@ -112,10 +108,6 @@
         font-weight: bold;
         text-align: center;
         margin: 2rem 0;
-        background: linear-gradient(to right, #3b82f6, #60a5fa);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
         color: #e2e8f0 !important;
       }
 
@@ -206,13 +198,16 @@
     <div class="container">
       <div class="header">
         <div class="logo-container">
-          <img src="https://logoimages6789.s3.ap-south-1.amazonaws.com/convoLogo.png" alt="Convolution X Logo" />
+          <img
+            src="https://logoimages6789.s3.ap-south-1.amazonaws.com/convoLogo.png"
+            alt="Convolution X Logo"
+          />
         </div>
-        <h1 class="welcome-title">Welcome to Decisia! 🦈</h1>
+        <h1 class="welcome-title">Welcome to <sapn class="highlight">Decisia!</span> 🦈</h1>
       </div>
 
       <div class="content">
-        <p>Dear {{name}},</p>
+        <p>Dear <span class="highlight">{{name}}</span>,</p>
         <p>
           Welcome to Convolution X's very own
           <span class="highlight">"Shark Tank"</span>! Your registration is
