@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="only light" />
-    <title>Registration Successful for Algomaniac</title>
+    <title>Important Instructions - Algomaniac 2025</title>
     <style>
       :root {
         color-scheme: only light;
@@ -93,55 +93,48 @@
         margin: 0.5rem 0;
       }
 
-      .section-title {
-        font-size: 1.75rem;
-        font-weight: bold;
-        text-align: center;
-        margin: 2rem 0;
-        color: #60a5fa !important;
+      .steps-list {
+        list-style: none;
+        margin: 1.5rem 0;
       }
 
-      .events-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
-        padding: 1rem;
-      }
-
-      .event-card {
-        background: rgba(30, 41, 59, 0.5) !important;
-        border-radius: 12px;
-        overflow: hidden;
-        transition: transform 0.3s ease;
-        border: 1px solid rgba(59, 130, 246, 0.2);
-        text-decoration: none;
-      }
-
-      .event-card:hover {
-        transform: translateY(-5px);
-      }
-
-      .event-image {
-        width: 100%;
-        height: 160px;
-        object-fit: cover;
-      }
-
-      .event-content {
-        padding: 1.25rem;
-      }
-
-      .event-title {
-        font-size: 1.25rem;
-        font-weight: bold;
-        margin-bottom: 0.5rem;
-        color: #60a5fa !important;
-      }
-
-      .event-description {
-        font-size: 0.875rem;
-        color: #e2e8f0 !important;
+      .steps-list li {
         margin-bottom: 1rem;
+        padding-left: 2rem;
+        position: relative;
+      }
+
+      .steps-list li::before {
+        content: counter(step-counter);
+        counter-increment: step-counter;
+        position: absolute;
+        left: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: #3b82f6;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.875rem;
+        font-weight: bold;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: linear-gradient(to right, #3b82f6, #2563eb);
+        color: white !important;
+        text-decoration: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 9999px;
+        font-weight: bold;
+        margin: 0.5rem 0;
+        transition: opacity 0.2s;
+      }
+
+      .cta-button:hover {
+        opacity: 0.9;
       }
 
       .footer {
@@ -152,16 +145,17 @@
         font-size: 0.875rem;
         color: #94a3b8 !important;
       }
-      .cta-button {
-        display: inline-block;
-        background: linear-gradient(to right, #3b82f6, #2563eb);
-        color: white !important;
-        text-decoration: none;
-        padding: 0.75rem 1.5rem;
-        border-radius: 9999px;
-        font-weight: bold;
-        margin: 1rem 0;
-        transition: opacity 0.2s;
+
+      .note {
+        margin-top: 1.5rem;
+        padding: 1rem;
+        background: rgba(239, 68, 68, 0.1);
+        border-radius: 8px;
+        border: 1px solid rgba(239, 68, 68, 0.2);
+      }
+
+      .note strong {
+        color: #ef4444 !important;
       }
 
       @media (max-width: 480px) {
@@ -177,15 +171,8 @@
         .container {
           padding: 1.5rem;
         }
-        .events-grid {
-          grid-template-columns: 1fr;
-          padding: 0.5rem;
-        }
-        .section-title {
-          font-size: 1.5rem;
-        }
-        .responsive-margin {
-          margin-top: 1rem;
+        .steps-list li {
+          padding-left: 1.75rem;
         }
       }
     </style>
@@ -200,111 +187,62 @@
           />
         </div>
         <h1 class="success-title">
-          Welcome to <span class="highlight">Algomaniac!</span>
+          Welcome to <span class="highlight">Algomaniac 2025</span>
         </h1>
       </div>
 
       <div class="content">
-        <p>Dear <span class="highlight">{{name}}</span>,</p>
+        <p>Hello Participant!</p>
         <br />
         <p>
-          We have received your registration for
-          <span class="highlight">Algomaniac</span>. Stay tuned for more
-          details, and feel free to reach out if you have any questions.
+          Thank you for showing interest in
+          <span class="highlight">Algomaniac 2025</span>. As we gear up for the
+          Prelims on <span class="date-highlight">17/2/2025</span>, we request
+          you to complete the following steps:
         </p>
-        <br />
-        <p>
-          You can contact our event leads,
-          <span class="highlight">Shakya Majumdar</span> or
-          <span class="highlight">Srijit Chakraborty</span> directly. We are
-          thrilled to have you on board and look forward to your participation.
-        </p>
-        <br />
-        <a
-          href="https://chat.whatsapp.com/JQLFm2nFKUQHOBosyKcbuu"
-          class="cta-button"
-          >Join Communication Channel</a
-        >
-      </div>
 
-      <h2 class="section-title">Other Events</h2>
-      <div class="events-grid">
-        <a
-          href="https://www.convolutionjuee.in/event/sparkhack"
-          class="event-card responsive-margin"
-        >
-          <img
-            src="https://logoimages6789.s3.ap-south-1.amazonaws.com/sparkhack.png"
-            alt="Hackathon Event"
-            class="event-image"
-          />
-          <div class="event-content">
-            <h3 class="event-title">SparkHack</h3>
-            <p class="event-description">
-              Hackathon focused on solving real-world problems with
-              innovative solutions. Join us to build something extraordinary!
-            </p>
-          </div>
-        </a>
+        <ol class="steps-list" style="counter-reset: step-counter">
+          <li>
+            Create an account on HackerRank, if you don't already have one.
+          </li>
+          <li>
+            Sign up for the Prelims contest on HackerRank:
+            <br />
+            <a
+              href="https://www.hackerrank.com/algomaniac-prelims-2025"
+              class="cta-button"
+            >
+              Register for Prelims
+            </a>
+          </li>
+          <li>
+            Share your HackerRank username with us:
+            <br />
+            <a href="https://forms.gle/ZUWe7eNLmGAitwxt6" class="cta-button">
+              Submit Username
+            </a>
+          </li>
+          <li>
+            Join our WhatsApp group for updates:
+            <br />
+            <a
+              href="https://chat.whatsapp.com/JQLFm2nFKUQHOBosyKcbuu"
+              class="cta-button"
+            >
+              Join WhatsApp Group
+            </a>
+          </li>
+        </ol>
 
-        <a
-          href="https://www.convolutionjuee.in/event/inquizzitive"
-          class="event-card responsive-margin"
-        >
-          <img
-            src="https://logoimages6789.s3.ap-south-1.amazonaws.com/inquizzitive.png"
-            alt="Quiz Competition"
-            class="event-image"
-          />
-          <div class="event-content">
-            <h3 class="event-title">Inquizzitive</h3>
-            <p class="event-description">
-              Test your knowledge and compete with the brightest minds in this
-              exciting quiz competition. Are you ready for the challenge?
-            </p>
-          </div>
-        </a>
-
-        <a
-          href="https://www.convolutionjuee.in/event/eureka"
-          class="event-card responsive-margin"
-        >
-          <img
-            src="https://logoimages6789.s3.ap-south-1.amazonaws.com/eureka.png"
-            alt="Innovation Challenge"
-            class="event-image"
-          />
-          <div class="event-content">
-            <h3 class="event-title">Eureka</h3>
-            <p class="event-description">
-              Showcase your innovative ideas and solutions in this exciting
-              technical competition. Turn your concepts into reality!
-            </p>
-          </div>
-        </a>
-
-        <a
-          href="https://www.convolutionjuee.in/event/decisia"
-          class="event-card responsive-margin"
-        >
-          <img
-            src="https://logoimages6789.s3.ap-south-1.amazonaws.com/desicia.png"
-            alt="Business Competition"
-            class="event-image"
-          />
-          <div class="event-content">
-            <h3 class="event-title">Decisia</h3>
-            <p class="event-description">
-              Your platform to pitch business ideas, showcase profit margins,
-              and present to our panel of expert judges.
-            </p>
-          </div>
-        </a>
+        <div class="note">
+          <strong>Note:</strong> All of these steps are mandatory for your
+          registration to be considered valid.
+        </div>
       </div>
 
       <div class="footer">
-        <p>Thanking You,</p>
-        <p class="highlight">Convolution-X Organising Team</p>
+        <p>Wishing you the best of luck,</p>
+        <p class="highlight">Convolution X Team</p>
       </div>
     </div>
   </body>
