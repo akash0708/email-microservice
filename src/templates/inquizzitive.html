@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="dark only" />
-    <title>Registration Successful for Inquizzitive</title>
+    <meta name="color-scheme" content="only light" />
+    <title>Important Instructions - Inquizzitive 2025</title>
     <style>
       :root {
-        color-scheme: dark only;
+        color-scheme: only light;
       }
 
       * {
@@ -64,8 +64,8 @@
       .success-title {
         font-size: 2rem;
         font-weight: bold;
-        margin-bottom: 1.5rem;
         color: #e2e8f0 !important;
+        margin-bottom: 1.5rem;
       }
 
       .content {
@@ -82,66 +82,55 @@
         font-weight: bold;
       }
 
-      .date-highlight {
-        display: inline-block;
-        background: rgba(59, 130, 246, 0.1);
-        padding: 0.25rem 0.75rem;
-        border-radius: 9999px;
-        border: 1px solid rgba(59, 130, 246, 0.2);
-        color: #60a5fa !important;
-        font-weight: bold;
-        margin: 0.5rem 0;
-      }
-
-      .section-title {
-        font-size: 1.75rem;
-        font-weight: bold;
-        text-align: center;
-        margin: 2rem 0;
-        color: #e2e8f0 !important;
-      }
-
-      .events-grid {
+      .schedule-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin: 1.5rem 0;
+      }
+
+      .schedule-item {
+        background: rgba(59, 130, 246, 0.1);
         padding: 1rem;
-      }
-
-      .event-card {
-        background: rgba(30, 41, 59, 0.5) !important;
-        border-radius: 12px;
-        overflow: hidden;
-        transition: transform 0.3s ease;
+        border-radius: 8px;
         border: 1px solid rgba(59, 130, 246, 0.2);
-        text-decoration: none;
+        text-align: center;
       }
 
-      .event-card:hover {
-        transform: translateY(-5px);
-      }
-
-      .event-image {
-        width: 100%;
-        height: 160px;
-        object-fit: cover;
-      }
-
-      .event-content {
-        padding: 1.25rem;
-      }
-
-      .event-title {
+      .schedule-time {
         font-size: 1.25rem;
+        color: #60a5fa !important;
         font-weight: bold;
         margin-bottom: 0.5rem;
-        color: #60a5fa !important;
       }
 
-      .event-description {
+      .schedule-label {
         font-size: 0.875rem;
         color: #e2e8f0 !important;
-        margin-bottom: 1rem;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: linear-gradient(to right, #3b82f6, #2563eb);
+        color: white !important;
+        text-decoration: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 9999px;
+        font-weight: bold;
+        margin: 1rem 0;
+        transition: opacity 0.2s;
+      }
+
+      .cta-button:hover {
+        opacity: 0.9;
+      }
+
+      .note {
+        margin-top: 1.5rem;
+        padding: 1rem;
+        background: rgba(59, 130, 246, 0.1);
+        border-radius: 8px;
+        border: 1px solid rgba(59, 130, 246, 0.2);
       }
 
       .footer {
@@ -151,6 +140,15 @@
         border-top: 1px solid rgba(59, 130, 246, 0.2);
         font-size: 0.875rem;
         color: #94a3b8 !important;
+      }
+
+      .event-leads {
+        margin-top: 1rem;
+        text-align: center;
+      }
+
+      .event-leads p {
+        margin: 0.25rem 0;
       }
 
       @media (max-width: 480px) {
@@ -166,15 +164,11 @@
         .container {
           padding: 1.5rem;
         }
-        .events-grid {
+        .schedule-grid {
           grid-template-columns: 1fr;
-          padding: 0.5rem;
-        }
-        .section-title {
-          font-size: 1.5rem;
         }
         .responsive-margin {
-          margin-top: 1rem;
+          margin-top: 1.5rem;
         }
       }
     </style>
@@ -185,86 +179,57 @@
         <div class="logo-container">
           <img
             src="https://logoimages6789.s3.ap-south-1.amazonaws.com/convoLogo.png"
-            alt="Convolution"
+            alt="Convolution X"
           />
         </div>
         <h1 class="success-title">
-          Welcome to <span class="highlight">Inquizzitive!</span>
+          Welcome to <span class="highlight">Inquizzitive</span>
         </h1>
       </div>
 
       <div class="content">
-        <p>Dear <span class="highlight">{{name}}</span>,</p>
+        <p>Dear Participant,</p>
         <br />
         <p>
-          We have received your registration for
-          <span class="highlight">{{teamName}}</span> for
-          <span class="highlight">Inquizzitive</span> and will be using this
-          email address to send any reminders or selection updates as may be
-          needed.
+          Greetings from <span class="highlight">Inquizzitive</span>! We're thrilled to have you onboard for this exciting quiz competition, part of 
+          <span class="highlight">Convolution X</span>, organized by Jadavpur University Electrical Engineering (JUEE).
         </p>
         <br />
         <p>
-          You can also contact our event leads,
-          <span class="highlight">Parijat Majumdar</span> or
-          <span class="highlight">Devmalya Ghatak</span> directly. We are
-          thrilled to have you on board and look forward to your participation.
+          To ensure smooth communication and provide important updates, we have created a WhatsApp group for all registered teams. Please join using the link below:
         </p>
         <br />
-        <p>
-          Should you have any questions or need assistance, feel free to reach
-          out to the event leads through our website.
-        </p>
-        <br />
-        <p>
-          See you on
-          <span class="date-highlight">20th February, 2025 at 2:30 PM</span>
-        </p>
-      </div>
-
-      <h2 class="section-title">Other Events</h2>
-      <div class="events-grid">
-        <a
-          href="https://www.convolutionjuee.in/event/sparkhack"
-          class="event-card"
-        >
-          <img
-            src="https://logoimages6789.s3.ap-south-1.amazonaws.com/sparkhack.png"
-            alt="Hackathon Event"
-            class="event-image"
-          />
-          <div class="event-content">
-            <h3 class="event-title">SparkHack</h3>
-            <p class="event-description">
-              48-hour hackathon focused on solving real-world problems with
-              innovative solutions. Join us to build something extraordinary!
-            </p>
-          </div>
+        <a href="https://chat.whatsapp.com/ErbnaZ6EIZK5GHIfp44zqT" class="cta-button">
+          Join WhatsApp Group
         </a>
 
-        <a
-          href="https://www.convolutionjuee.in/event/decisia"
-          class="event-card responsive-margin"
-        >
-          <img
-            src="https://logoimages6789.s3.ap-south-1.amazonaws.com/desicia.png"
-            alt="Business Pitch"
-            class="event-image"
-          />
-          <div class="event-content">
-            <h3 class="event-title">Decisia</h3>
-            <p class="event-description">
-              Your platform to pitch that dream business idea. Be the CEO,
-              create the product, showcase your profit margins, and pitch it to
-              the "sharks".
-            </p>
+        <h2 class="highlight" style="margin-top: 2rem;">Event Schedule (February 20th)</h2>
+        <div class="schedule-grid">
+          <div class="schedule-item">
+            <div class="schedule-time">2:30 PM</div>
+            <div class="schedule-label">Prelims (tentative)</div>
           </div>
-        </a>
+          <div class="schedule-item responsive-margin">
+            <div class="schedule-time">4:00 PM</div>
+            <div class="schedule-label">Finals (tentative)</div>
+          </div>
+        </div>
+
+        <div class="note">
+          <strong>Important:</strong> Only team leaders need to join the WhatsApp group to stay updated. Other team members need not join the group.
+        </div>
+        
+        <p style="margin-top: 1.5rem;">
+          If you have any queries, feel free to reach out. Looking forward to an amazing quizzing experience with you!
+        </p>
       </div>
 
       <div class="footer">
-        <p>Thanking You,</p>
-        <p class="highlight">Convolution X Organising Team</p>
+        <p>Best regards,</p>
+        <div class="event-leads">
+          <p class="highlight">Devmalya Ghatak & Parijat Majumdar</p>
+          <p>Event Leads, Inquizzitive</p>
+        </div>
       </div>
     </div>
   </body>
